@@ -1,21 +1,22 @@
-head {
-  background-color: green;
-}
-
 body {
   background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom right, #a0a0ff, darkgray);
 }
 
 h1 {
   text-align: center;  
   background-image: linear-gradient(to right, white , darkgray);
   color: blue;
+  padding: 10px;
+  margin: 0;
 }
 
 p {
-  color: black;
   font-family: verdana;
   font-size: 16px;
+  padding-left: 10px;
 }
 
 audio {
@@ -23,10 +24,128 @@ audio {
   border-style:solid;
 }
 
-div {
-  width: 320px;
-  height: 50px;
-  padding: 10px;
-  border: 5px solid gray;
+ul { 
+  display: flex;
+  list-style-type: none;
   margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
 }
+
+ul li a {
+  display: block;
+  color: yellow;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: blue;
+  color: black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: transparent;
+  padding: 1px;
+}
+
+.container div {
+  border: 2px solid;
+  text-align: center;
+  padding: 3px;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 30%;
+  background-color: transparent;
+  padding: 8px;
+}
+
+.container2 div {
+  border: 2px solid black;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(to right, darkgray , white);
+  color: blue;
+  padding: 15px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  background-image:none;
+}
+
+.btn {
+  padding: 10px 10px; 
+  cursor: pointer;
+  font-size: 30 px;
+}
+
+.success {
+	background-color: darkgreen;
+	color: white;
+         } 
+
+.main {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            font-size: 16px;
+            padding-left: 35px;
+            position: relative;
+        }
+
+.main input[type=checkbox] {
+            visibility: hidden;
+        }
+
+.checkbox-container {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border: 2px solid #000;
+            left: 5px;
+        }
+
+.main:hover input~.checkbox-container {
+            background-color: yellow;
+        }
+
+.main input:active~.checkbox-container {
+            background-color: red;
+        }
+
+.main input:checked~.checkbox-container {
+            background-color: green;
+        }
+
+.checkbox-container::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+.main input:checked~.checkbox-container::after {
+            display: block;
+        }
