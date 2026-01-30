@@ -9,8 +9,8 @@ function nextSongPlay(id1,id2,play_after) {
 });
 }
 
-all_names=["2h51","After The Storm","Alone","Classic","Collapsing","Dance","Duality","Elephant","Epica","Fading Away","Forest","Last Waltz","Late Night","Lullaby","Plant","Rhino","Rise","The Wave"]
-all_ids=["2h51","storm","alone","classic","collapsing","dance","duality","elephant","epica","fading","forest","lastwaltz","latenight","lullaby","plant","rhino","rise","wave"];
+all_names=["2h51","After The Storm","Alone","Calm Like Us","Collapsing","Dance","Duality","Elephant","Epica","Fading Away","Forest","Last Waltz","Late Night","Lullaby","Plant","Rhino","Rise","The Wave"]
+all_ids=["2h51","storm","alone","calm","collapsing","dance","duality","elephant","epica","fading","forest","lastwaltz","latenight","lullaby","plant","rhino","rise","wave"];
 kept_ids=[];
 toggled_darkmode=false;
 
@@ -53,7 +53,7 @@ function toggleDarkMode() {
        }
 };
 
-checkbox_ids=["checkbox_2h51","checkbox_storm","checkbox_alone","checkbox_classic","checkbox_collapsing","checkbox_dance","checkbox_duality","checkbox_elephant","checkbox_epica","checkbox_fading","checkbox_forest","checkbox_lastwaltz","checkbox_latenight","checkbox_lullaby","checkbox_plant","checkbox_rhino","checkbox_rise","checkbox_wave"];
+checkbox_ids=["checkbox_2h51","checkbox_storm","checkbox_alone","checkbox_calm","checkbox_collapsing","checkbox_dance","checkbox_duality","checkbox_elephant","checkbox_epica","checkbox_fading","checkbox_forest","checkbox_lastwaltz","checkbox_latenight","checkbox_lullaby","checkbox_plant","checkbox_rhino","checkbox_rise","checkbox_wave"];
 for (let i = 0; i < checkbox_ids.length; i++) {
 	let checkbx = document.getElementById(checkbox_ids[i]); 
 	checkbx.addEventListener('change', (event) => {
